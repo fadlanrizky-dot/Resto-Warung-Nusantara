@@ -95,17 +95,8 @@
   textarea { resize: vertical; min-height: 80px; }
 
   /* TABLE LAYOUT (FLOOR PLAN) */
-  .floorplan-wrap {
-    background: var(--white);
-    border: 1.5px solid var(--border);
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin: 1.5rem 0;
-    overflow-x: auto;
-  }
-  .floorplan-legend {
-    display: flex; gap: 1.5rem; margin-bottom: 1.25rem; flex-wrap: wrap;
-  }
+  .floorplan-wrap { background: var(--white); border: 1.5px solid var(--border); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; overflow-x: auto; }
+  .floorplan-legend { display: flex; gap: 1.5rem; margin-bottom: 1.25rem; flex-wrap: wrap; }
   .legend-item { display: flex; align-items: center; gap: 6px; font-size: 0.78rem; color: var(--brown-light); }
   .legend-dot { width: 12px; height: 12px; border-radius: 3px; }
   .ld-free { background: #EAF3DE; border: 1.5px solid #5A8A2A; }
@@ -128,31 +119,10 @@
     gap: 10px;
     min-width: 490px;
   }
-  .fp-zone-label {
-    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--brown-light); padding: 4px 0; text-align: center;
-  }
-  .fp-path {
-    grid-area: PATH;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 0.65rem; color: var(--border); letter-spacing: 0.08em; text-transform: uppercase;
-    border-left: 2px dashed var(--border); border-right: 2px dashed var(--border);
-  }
-  .fp-vip-label {
-    grid-area: vip-label;
-    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--gold-dark); padding: 8px 0 2px; border-top: 1px dashed var(--border);
-    grid-column: 1/-1; text-align: center;
-  }
-  .fp-table {
-    width: 90px; height: 72px;
-    border-radius: 8px;
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    cursor: pointer; transition: all 0.18s;
-    border: 2px solid transparent;
-    font-size: 0.75rem;
-    user-select: none;
-  }
+  .fp-zone-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brown-light); padding: 4px 0; text-align: center; }
+  .fp-path { grid-area: PATH; display: flex; align-items: center; justify-content: center; font-size: 0.65rem; color: var(--border); letter-spacing: 0.08em; text-transform: uppercase; border-left: 2px dashed var(--border); border-right: 2px dashed var(--border); }
+  .fp-vip-label { grid-area: vip-label; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-dark); padding: 8px 0 2px; border-top: 1px dashed var(--border); grid-column: 1/-1; text-align: center; }
+  .fp-table { width: 90px; height: 72px; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; transition: all 0.18s; border: 2px solid transparent; font-size: 0.75rem; user-select: none; }
   .fp-table.free  { background: #EAF3DE; border-color: #5A8A2A; color: var(--green); }
   .fp-table.busy  { background: #FAECE7; border-color: #C0604A; color: var(--red); cursor: not-allowed; opacity: 0.6; }
   .fp-table.selected { background: #FDF7EB; border-color: var(--gold); color: var(--gold-dark); transform: scale(1.05); box-shadow: 0 2px 12px rgba(201,151,43,0.25); }
@@ -172,23 +142,11 @@
   .menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 1rem; }
   .menu-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; transition: all 0.2s; }
   .menu-card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
-  .menu-img {
-    width: 100%; height: 130px; position: relative; overflow: hidden;
-    background: #F5EDD8;
-  }
-  .menu-img img {
-    width: 100%; height: 100%; object-fit: cover; display: block;
-    transition: transform 0.35s ease;
-  }
+  .menu-img { width: 100%; height: 130px; position: relative; overflow: hidden; background: #F5EDD8; }
+  .menu-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.35s ease; }
   .menu-card:hover .menu-img img { transform: scale(1.07); }
-  .menu-img-fallback {
-    position: absolute; inset: 0; display: flex; align-items: center;
-    justify-content: center; font-size: 2.8rem; background: #F5EDD8; z-index: 1;
-  }
-  .menu-img-badge {
-    position: absolute; top: 7px; left: 7px; z-index: 3;
-    display: flex; gap: 4px; flex-wrap: wrap; pointer-events: none;
-  }
+  .menu-img-fallback { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 2.8rem; background: #F5EDD8; z-index: 1; }
+  .menu-img-badge { position: absolute; top: 7px; left: 7px; z-index: 3; display: flex; gap: 4px; flex-wrap: wrap; pointer-events: none; }
   .menu-body { padding: 0.8rem; }
   .menu-name { font-weight: 600; font-size: 0.88rem; color: var(--brown); margin-bottom: 2px; line-height: 1.35; }
   .menu-desc { font-size: 0.74rem; color: var(--brown-light); line-height: 1.5; margin-bottom: 0.6rem; }
@@ -198,6 +156,7 @@
   .add-btn:hover { background: var(--gold); color: var(--brown); }
   .spicy { font-size: 0.62rem; color: #fff; font-weight: 700; background: var(--red); padding: 2px 6px; border-radius: 8px; }
   .badge-paket { font-size: 0.6rem; background: var(--green-light); color: #fff; font-weight: 700; padding: 2px 6px; border-radius: 8px; }
+  
   /* cart thumbnail */
   .cart-thumb { width: 44px; height: 44px; border-radius: 6px; object-fit: cover; flex-shrink: 0; background: #F5EDD8; }
   .cart-thumb-fallback { width: 44px; height: 44px; border-radius: 6px; background: #F5EDD8; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0; }
@@ -304,7 +263,6 @@
 </head>
 <body>
 
-<!-- NAVIGATION -->
 <nav>
   <div class="nav-logo">Warung <span>Nusantara</span></div>
   <div class="nav-steps" id="nav-dots"></div>
@@ -313,7 +271,6 @@
   </button>
 </nav>
 
-<!-- CART DRAWER -->
 <div class="drawer-overlay" id="drawer-overlay" onclick="closeCart()"></div>
 <div class="drawer" id="cart-drawer">
   <div class="drawer-header">
@@ -330,10 +287,8 @@
   </div>
 </div>
 
-<!-- NOTIFICATION -->
 <div class="notif" id="notif"></div>
 
-<!-- ===== PAGE: HOME ===== -->
 <div class="page active" id="page-home">
   <div class="hero-batik"></div>
   <div class="hero-content">
@@ -353,7 +308,6 @@
   </div>
 </div>
 
-<!-- ===== PAGE: RESERVATION ===== -->
 <div class="page" id="page-reservation">
   <div class="section">
     <div class="progress-bar">
@@ -440,11 +394,10 @@
   </div>
 </div>
 
-<!-- ===== PAGE: MENU ===== -->
 <div class="page" id="page-menu">
   <div class="section">
     <div class="progress-bar">
-      <div class="prog-step done"><div class="prog-num">✓</div> Reservasi</div>
+      <div class="prog-step done"><div class="prog-num">1</div> Reservasi</div>
       <div class="prog-arrow">›</div>
       <div class="prog-step active"><div class="prog-num">2</div> Menu</div>
       <div class="prog-arrow">›</div>
@@ -452,439 +405,503 @@
       <div class="prog-arrow">›</div>
       <div class="prog-step"><div class="prog-num">4</div> Bayar</div>
     </div>
-    <div class="info-chip">📍 <span id="res-chip-text">Meja —</span></div>
-    <p class="section-title">Pilih Menu</p>
-    <p class="section-sub">Semua bahan segar, dimasak hari ini. Klik + untuk menambah ke keranjang.</p>
+
+    <div class="info-chip" id="menu-res-summary"> Meja Belum Dipilih</div>
+
+    <p class="section-title">Pilih Hidangan</p>
+    <p class="section-sub">Tambahkan makanan dan minuman khas Nusantara pilihan Anda ke keranjang pesanan.</p>
     <div class="divider"></div>
+
     <div class="category-tabs" id="category-tabs"></div>
     <div class="menu-grid" id="menu-grid"></div>
-    <button class="btn-full btn-brown mt1" id="menu-order-btn" onclick="goToPage('order')" style="margin-top:1.5rem">Lihat Pesanan →</button>
+
+    <button class="btn-full btn-brown mt1" onclick="goToPage('order')" style="margin-top:2rem">Lanjut Tinjau Pesanan →</button>
+    <button class="btn-full btn-ghost mt1" onclick="goToPage('reservation')" style="margin-top:0.5rem">← Kembali ke Denah Meja</button>
   </div>
 </div>
 
-<!-- ===== PAGE: ORDER ===== -->
 <div class="page" id="page-order">
   <div class="section">
     <div class="progress-bar">
-      <div class="prog-step done"><div class="prog-num">✓</div> Reservasi</div>
+      <div class="prog-step done"><div class="prog-num">1</div> Reservasi</div>
       <div class="prog-arrow">›</div>
-      <div class="prog-step done"><div class="prog-num">✓</div> Menu</div>
+      <div class="prog-step done"><div class="prog-num">2</div> Menu</div>
       <div class="prog-arrow">›</div>
       <div class="prog-step active"><div class="prog-num">3</div> Pesanan</div>
       <div class="prog-arrow">›</div>
       <div class="prog-step"><div class="prog-num">4</div> Bayar</div>
     </div>
-    <p class="section-title">Review Pesanan</p>
-    <p class="section-sub">Cek kembali pesanan Anda sebelum dilanjutkan ke pembayaran.</p>
-    <div class="divider"></div>
-    <div class="cart-items" id="order-items"></div>
-    <button class="btn-full btn-ghost" onclick="goToPage('menu')" style="margin-bottom:0.75rem">+ Tambah Menu</button>
-    <div class="note-field">
-      <label>Catatan untuk Dapur</label>
-      <textarea id="kitchen-note" placeholder="Contoh: tanpa sambal, tidak terlalu asin, alergi kacang..." style="margin-top:6px"></textarea>
-    </div>
-    <div class="order-summary" id="order-summary-box"></div>
-    <button class="btn-full btn-gold mt1" onclick="goToPage('payment')">Lanjut ke Pembayaran →</button>
-    <button class="btn-full btn-ghost mt1" onclick="goToPage('menu')" style="margin-top:0.5rem">← Kembali ke Menu</button>
-  </div>
-</div>
 
-<!-- ===== PAGE: PAYMENT ===== -->
-<div class="page" id="page-payment">
-  <div class="section">
-    <div class="progress-bar">
-      <div class="prog-step done"><div class="prog-num">✓</div> Reservasi</div>
-      <div class="prog-arrow">›</div>
-      <div class="prog-step done"><div class="prog-num">✓</div> Menu</div>
-      <div class="prog-arrow">›</div>
-      <div class="prog-step done"><div class="prog-num">✓</div> Pesanan</div>
-      <div class="prog-arrow">›</div>
-      <div class="prog-step active"><div class="prog-num">4</div> Bayar</div>
-    </div>
-    <p class="section-title">Pembayaran</p>
-    <p class="section-sub">Pilih metode pembayaran yang Anda inginkan.</p>
+    <p class="section-title">Tinjau Pesanan</p>
+    <p class="section-sub">Periksa kembali detail pemesanan meja dan daftar menu pilihan Anda.</p>
     <div class="divider"></div>
 
     <div class="bill-box">
       <div class="bill-header">
         <div>
-          <div class="bill-header-title">Struk Pesanan</div>
-          <div class="bill-header-sub" id="bill-table-info">Meja — · —</div>
+          <p class="bill-header-title">Detail Reservasi</p>
+          <p class="bill-header-sub" id="bill-order-id">ID: —</p>
         </div>
-        <div style="text-align:right">
-          <div style="font-size:0.72rem;opacity:0.5">No. Order</div>
-          <div style="font-size:1rem;font-weight:700;color:var(--gold-light)" id="order-no">#—</div>
-        </div>
+        <p style="font-weight:700;color:var(--gold-light)" id="bill-table-badge">—</p>
       </div>
-      <div class="bill-body" id="bill-body"></div>
+      <div class="bill-body">
+        <div class="bill-row"><span>Nama Pemesan</span><span id="bill-name" style="font-weight:600">—</span></div>
+        <div class="bill-row"><span>Nomor HP</span><span id="bill-phone">—</span></div>
+        <div class="bill-row"><span>Waktu & Area</span><span id="bill-time-area">—</span></div>
+        <div class="bill-row"><span>Jumlah Tamu</span><span id="bill-guests">—</span></div>
+      </div>
     </div>
 
-    <p style="font-size:0.88rem;font-weight:700;color:var(--brown);margin-bottom:1rem;letter-spacing:0.03em;">Metode Pembayaran</p>
-    <div class="payment-methods" id="payment-methods"></div>
+    <p style="font-size:0.88rem;color:var(--brown);margin-bottom:0.75rem;font-weight:700;letter-spacing:0.03em;">🛒 Daftar Menu Pilihan</p>
+    <div id="order-page-items"></div>
 
-    <div id="qris-box" style="display:none;">
-      <div style="font-size:0.82rem;color:var(--brown-light);margin-bottom:0.75rem;text-align:center">Scan QRIS untuk membayar</div>
-      <svg width="150" height="150" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:0 auto;display:block">
-        <rect width="140" height="140" fill="white"/>
-        <rect x="10" y="10" width="50" height="50" rx="4" fill="none" stroke="#3D2B1F" stroke-width="4"/>
-        <rect x="20" y="20" width="30" height="30" fill="#3D2B1F"/>
-        <rect x="80" y="10" width="50" height="50" rx="4" fill="none" stroke="#3D2B1F" stroke-width="4"/>
-        <rect x="90" y="20" width="30" height="30" fill="#3D2B1F"/>
-        <rect x="10" y="80" width="50" height="50" rx="4" fill="none" stroke="#3D2B1F" stroke-width="4"/>
-        <rect x="20" y="90" width="30" height="30" fill="#3D2B1F"/>
-        <rect x="80" y="80" width="8" height="8" fill="#3D2B1F"/>
-        <rect x="92" y="80" width="8" height="8" fill="#3D2B1F"/>
-        <rect x="104" y="80" width="8" height="8" fill="#3D2B1F"/>
-        <rect x="116" y="80" width="8" height="8" fill="#3D2B1F"/>
-        <rect x="80" y="92" width="8" height="8" fill="#3D2B1F"/>
-        <rect x="104" y="92" width="8" height="8" fill="#3D2B1F"/>
-        <rect x="80" y="104" width="8" height="8" fill="#3D2B1F"/>
-        <rect x="92" y="104" width="8" height="8" fill="#3D2B1F"/>
-        <rect x="116" y="104" width="8" height="8" fill="#3D2B1F"/>
-        <rect x="104" y="116" width="8" height="8" fill="#3D2B1F"/>
-        <rect x="116" y="116" width="8" height="8" fill="#3D2B1F"/>
-      </svg>
-      <div style="font-size:0.78rem;color:var(--brown-light);margin-top:0.75rem;text-align:center">Total: <strong id="qris-total" style="color:var(--brown)">Rp 0</strong></div>
+    <div class="order-summary">
+      <div class="summary-row"><span>Subtotal Menu</span><span id="sum-subtotal">Rp 0</span></div>
+      <div class="summary-row"><span>Biaya Reservasi Meja</span><span id="sum-table-fee">Rp 0</span></div>
+      <div class="summary-row"><span>Pajak (PB1 10%)</span><span id="sum-tax">Rp 0</span></div>
+      <div class="summary-row total"><span>Total Keseluruhan</span><span id="sum-total">Rp 0</span></div>
     </div>
 
-    <button class="btn-full btn-gold mt1" onclick="processPayment()">Bayar Sekarang ✓</button>
-    <button class="btn-full btn-ghost mt1" onclick="goToPage('order')" style="margin-top:0.5rem">← Kembali</button>
+    <div class="form-group note-field">
+      <label>Catatan untuk Dapur / Pelayan</label>
+      <input type="text" id="order-notes" placeholder="Contoh: Tolong buat sambal dipisah, minta es batu lebih..." />
+    </div>
+
+    <button class="btn-full btn-brown" onclick="goToPage('payment')" style="margin-top:2rem">Lanjut ke Pembayaran →</button>
+    <button class="btn-full btn-ghost mt1" onclick="goToPage('menu')" style="margin-top:0.5rem">← Tambah Menu Lagi</button>
   </div>
 </div>
 
-<!-- ===== PAGE: THANK YOU ===== -->
-<div class="page" id="page-thankyou">
-  <div class="thankyou-wrap">
-    <div class="ty-icon">✓</div>
-    <h1 class="ty-title">Terima Kasih!</h1>
-    <p class="ty-sub">Pembayaran berhasil. Pesanan Anda sedang diproses oleh dapur. Selamat menikmati!</p>
-    <div class="ty-receipt" id="ty-receipt"></div>
-    <div>
-      <div class="feedback-label">Bagaimana pengalaman Anda hari ini?</div>
-      <div class="feedback" id="stars-wrap">
-        <span class="star-btn" onclick="rateStar(1)">⭐</span>
-        <span class="star-btn" onclick="rateStar(2)">⭐</span>
-        <span class="star-btn" onclick="rateStar(3)">⭐</span>
-        <span class="star-btn" onclick="rateStar(4)">⭐</span>
-        <span class="star-btn" onclick="rateStar(5)">⭐</span>
+<div class="page" id="page-payment">
+  <div class="section">
+    <div class="progress-bar">
+      <div class="prog-step done"><div class="prog-num">1</div> Reservasi</div>
+      <div class="prog-arrow">›</div>
+      <div class="prog-step done"><div class="prog-num">2</div> Menu</div>
+      <div class="prog-arrow">›</div>
+      <div class="prog-step done"><div class="prog-num">3</div> Pesanan</div>
+      <div class="prog-arrow">›</div>
+      <div class="prog-step active"><div class="prog-num">4</div> Bayar</div>
+    </div>
+
+    <p class="section-title">Metode Pembayaran</p>
+    <p class="section-sub">Pilih salah satu opsi pembayaran cepat di bawah ini.</p>
+    <div class="divider"></div>
+
+    <div class="payment-methods">
+      <div class="pay-method selected" onclick="selectPayment('qris')" id="pay-qris">
+        <span class="pay-icon">📱</span>
+        <div>
+          <p class="pay-name">QRIS Otomatis</p>
+          <p class="pay-desc">Gopay, OVO, Dana, ShopeePay, M-Banking</p>
+        </div>
+      </div>
+      <div class="pay-method" onclick="selectPayment('cash')" id="pay-cash">
+        <span class="pay-icon">💵</span>
+        <div>
+          <p class="pay-name">Bayar Kasir / Restoran</p>
+          <p class="pay-desc">Tunai atau Debit saat tiba di lokasi</p>
+        </div>
       </div>
     </div>
-    <button class="exit-btn" onclick="exitRestaurant()">Selesai &amp; Keluar 👋</button>
+
+    <div id="qris-box">
+      <p style="font-size:0.8rem;font-weight:700;color:var(--brown-light);margin-bottom:0.4rem;text-transform:uppercase;letter-spacing:0.05em;">Pindai QRIS untuk Membayar</p>
+      <p id="qris-timer" style="font-size:0.85rem;color:var(--red);font-weight:600;margin-bottom:0.75rem;">Sisa waktu bayar: 05:00</p>
+      <svg width="150" height="150" style="background:#000;padding:10px;border-radius:6px;margin:0 auto;display:block;" viewBox="0 0 100 100">
+        <rect x="0" y="0" width="30" height="30" fill="#fff"/>
+        <rect x="5" y="5" width="20" height="20" fill="#000"/>
+        <rect x="70" y="0" width="30" height="30" fill="#fff"/>
+        <rect x="75" y="5" width="20" height="20" fill="#000"/>
+        <rect x="0" y="70" width="30" height="30" fill="#fff"/>
+        <rect x="5" y="75" width="20" height="20" fill="#000"/>
+        <rect x="40" y="40" width="20" height="20" fill="#fff"/>
+        <rect x="15" y="45" width="10" height="10" fill="#fff"/>
+        <rect x="50" y="15" width="12" height="12" fill="#fff"/>
+        <rect x="75" y="45" width="15" height="15" fill="#fff"/>
+        <rect x="45" y="75" width="20" height="10" fill="#fff"/>
+      </svg>
+      <p style="font-size:0.7rem;color:var(--brown-light);margin-top:0.75rem;">Warung Nusantara Interaktif Payment Gateway v2.1</p>
+    </div>
+
+    <div class="bill-box">
+      <div class="bill-body" style="padding:1rem 1.25rem;">
+        <div class="bill-row"><span>Total Yang Harus Dibayar</span><span id="pay-total-amt" style="font-weight:700;font-size:1.1rem;color:var(--gold-dark);">Rp 0</span></div>
+      </div>
+    </div>
+
+    <button class="btn-full btn-gold" onclick="processPayment()">Konfirmasi Pembayaran Selesai ✓</button>
+    <button class="btn-full btn-ghost mt1" onclick="goToPage('order')" style="margin-top:0.5rem">← Kembali Tinjau Pesanan</button>
+  </div>
+</div>
+
+<div class="page" id="page-thankyou">
+  <div class="thankyou-wrap">
+    <div class="ty-icon">🎉</div>
+    <h2 class="ty-title">Matur Nuwun!</h2>
+    <p class="ty-sub">Reservasi dan pesanan Anda telah tersimpan ke dalam database restoran kami. Silakan tunjukkan struk digital di bawah kepada resepsionis saat tiba.</p>
+
+    <div class="ty-receipt">
+      <div class="ty-receipt-row"><span class="label">Kode Transaksi</span><span class="value" id="ty-code">—</span></div>
+      <div class="ty-receipt-row"><span class="label">Nama Tamu</span><span class="value" id="ty-name">—</span></div>
+      <div class="ty-receipt-row"><span class="label">Meja / Area</span><span class="value" id="ty-table">—</span></div>
+      <div class="ty-receipt-row"><span class="label">Waktu Kedatangan</span><span class="value" id="ty-time">—</span></div>
+      <hr style="border:none;border-top:1px dashed rgba(250,246,239,0.15);margin:0.5rem 0;" />
+      <div class="ty-receipt-row"><span class="label">Status Bayar</span><span class="value" id="ty-status" style="color:var(--gold-light);font-weight:700;">—</span></div>
+      <div class="ty-receipt-row"><span class="label">Total Pembayaran</span><span class="value ty-receipt-total" id="ty-total">Rp 0</span></div>
+    </div>
+
+    <p class="feedback-label">Bagaimana kenyamanan sistem pemesanan online kami?</p>
+    <div class="feedback">
+      <span class="star-btn" onclick="rateApp(1)">⭐</span>
+      <span class="star-btn" onclick="rateApp(2)">⭐</span>
+      <span class="star-btn" onclick="rateApp(3)">⭐</span>
+      <span class="star-btn" onclick="rateApp(4)">⭐</span>
+      <span class="star-btn" onclick="rateApp(5)">⭐</span>
+    </div>
+
+    <button class="exit-btn" onclick="exitRestaurant()">Keluar / Mulai Baru</button>
   </div>
 </div>
 
 <script>
-// =============================================
-// DATA: FLOOR PLAN TABLES
-// =============================================
-const TABLES = [
-  { id:'T01', name:'Meja 01', cap:'2 kursi', area:'indoor', status:'free', icon:'🪑', gridArea:'T01' },
-  { id:'T02', name:'Meja 02', cap:'2 kursi', area:'indoor', status:'busy', icon:'🪑', gridArea:'T02' },
-  { id:'T03', name:'Meja 03', cap:'4 kursi', area:'indoor', status:'free', icon:'🪑', gridArea:'T03' },
-  { id:'T04', name:'Meja 04', cap:'4 kursi', area:'indoor', status:'free', icon:'🪑', gridArea:'T04' },
-  { id:'T05', name:'Meja 05', cap:'2 kursi', area:'indoor', status:'free', icon:'🪑', gridArea:'T05' },
-  { id:'T06', name:'Meja 06', cap:'2 kursi', area:'indoor', status:'busy', icon:'🪑', gridArea:'T06' },
-  { id:'T07', name:'Meja 07', cap:'4 kursi', area:'outdoor', status:'free', icon:'🌿', gridArea:'T07' },
-  { id:'T08', name:'Meja 08', cap:'2 kursi', area:'outdoor', status:'free', icon:'🌿', gridArea:'T08' },
-  { id:'T09', name:'Meja 09', cap:'4 kursi', area:'outdoor', status:'busy', icon:'🌿', gridArea:'T09' },
-  { id:'T10', name:'Meja 10', cap:'4 kursi', area:'outdoor', status:'free', icon:'🌿', gridArea:'T10' },
-  { id:'T11', name:'Meja 11', cap:'6 kursi', area:'outdoor', status:'free', icon:'🌿', gridArea:'T11' },
-  { id:'T12', name:'Meja 12', cap:'6 kursi', area:'outdoor', status:'free', icon:'🌿', gridArea:'T12' },
-  { id:'VIP1', name:'VIP 1',  cap:'8 kursi', area:'vip',     status:'free', icon:'👑', gridArea:'VIP1' },
-  { id:'VIP2', name:'VIP 2',  cap:'10 kursi', area:'vip',    status:'free', icon:'👑', gridArea:'VIP2' },
-  { id:'VIP3', name:'VIP 3',  cap:'12 kursi', area:'vip',    status:'busy', icon:'👑', gridArea:'VIP3' },
+// --- DATABASES MENU (Kombinasi Unsplash Kualitas Tinggi Bebas Rusak) ---
+const menuDatabase = [
+  {
+    id: 'F01',
+    name: 'Rendang Daging Sapi Minang',
+    price: 68000,
+    category: 'makanan',
+    desc: 'Daging sapi pilihan yang dimasak perlahan dengan santan kental dan rempah kaya berjam-jam.',
+    img: 'https://images.unsplash.com/photo-1626844131082-256783952134?auto=format&fit=cover&w=400&q=80',
+    tags: ['spicy', 'Terlaris']
+  },
+  {
+    id: 'F02',
+    name: 'Sate Ayam Madura Legenda',
+    price: 42000,
+    category: 'makanan',
+    desc: '10 tusuk sate ayam empuk dibakar arang lengkap dengan bumbu kacang gurih halus dan lontong.',
+    img: 'https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=cover&w=400&q=80',
+    tags: ['Terlaris']
+  },
+  {
+    id: 'F03',
+    name: 'Nasi Goreng Kampung Nusantara',
+    price: 35000,
+    category: 'makanan',
+    desc: 'Nasi goreng bumbu terasi tradisional dibalut telur mata sapi, kerupuk udang, dan acar segar.',
+    img: 'https://images.unsplash.com/photo-1612182062633-9ff3b3598e96?auto=format&fit=cover&w=400&q=80',
+    tags: []
+  },
+  {
+    id: 'F04',
+    name: 'Soto Betawi Kuah Susu',
+    price: 48000,
+    category: 'makanan',
+    desc: 'Potongan daging jeroan sapi empuk dengan kuah santan-susu gurih legendaris plus emping renyah.',
+    img: 'https://images.unsplash.com/photo-1625938146369-adc83368bda7?auto=format&fit=cover&w=400&q=80',
+    tags: ['Rekomendasi']
+  },
+  {
+    id: 'F05',
+    name: 'Gado-Gado Spesial Sudirman',
+    price: 32000,
+    category: 'makanan',
+    desc: 'Sayuran segar rebus, tahu, tempe, telur siram saus kacang kental mede khas racikan chef.',
+    img: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=cover&w=400&q=80',
+    tags: []
+  },
+  {
+    id: 'B01',
+    name: 'Es Teh Manis Gula Batu',
+    price: 8000,
+    category: 'minuman',
+    desc: 'Seduhan daun teh melati pilihan khas Solo yang wangi, pekat, ditambah manisnya gula batu.',
+    img: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=cover&w=400&q=80',
+    tags: []
+  },
+  {
+    id: 'B02',
+    name: 'Es Kelapa Muda Gula Aren',
+    price: 18000,
+    category: 'minuman',
+    desc: 'Air kelapa muda segar beserta dagingnya yang lembut disiram sirup gula aren asli bermutu.',
+    img: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=cover&w=400&q=80',
+    tags: ['Rekomendasi']
+  },
+  {
+    id: 'B03',
+    name: 'Kopi Susu Gula Aren Kampung',
+    price: 22000,
+    category: 'minuman',
+    desc: 'Perpaduan espresso arabika-robusta premium, susu segar gurih, dan cairan legit gula aren.',
+    img: 'https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=cover&w=400&q=80',
+    tags: []
+  },
+  {
+    id: 'P01',
+    name: 'Paket Selamatan Berdua (2 Orang)',
+    price: 145000,
+    category: 'paket',
+    desc: 'Kombinasi 1 Porsi Rendang, 1 Soto Betawi, 2 Nasi Putih, 2 Es Teh Manis, Lengkap Kerupuk Kaleng.',
+    img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=cover&w=400&q=80',
+    tags: ['badge-paket', 'Hemat']
+  },
+  {
+    id: 'P02',
+    name: 'Paket Megibung Keluarga (4 Orang)',
+    price: 280000,
+    category: 'paket',
+    desc: 'Pesta hidangan: 1 Porsi Sate Ayam, 1 Rendang, 1 Gado-Gado, 1 Soto Betawi, 4 Nasi, 1 Pitcher Es Teh.',
+    img: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=cover&w=400&q=80',
+    tags: ['badge-paket', 'Terlaris']
+  }
 ];
 
-// =============================================
-// DATA: MENU — lengkap 33 item
-// =============================================
-const MENU = [
-  // Makanan Utama
-  { id:1,  cat:'Makanan Utama', name:'Ayam Goreng Lengkuas',     emoji:'🍗', img:'https://images.unsplash.com/photo-1732185269471-b62b52ca46f9?w=400&q=80', desc:'Ayam goreng gurih dengan aroma lengkuas yang khas',               price:22000, spicy:false, paket:false },
-  { id:2,  cat:'Makanan Utama', name:'Ayam Bakar Taliwang',      emoji:'🔥', img:'https://images.unsplash.com/photo-1628430042373-7fdf9431ccf9?w=400&q=80', desc:'Ayam bakar pedas khas Lombok dengan bumbu merah',                 price:24000, spicy:true,  paket:false },
-  { id:3,  cat:'Makanan Utama', name:'Ayam Betutu Gilimanuk',    emoji:'🍖', img:'https://images.unsplash.com/photo-1630315500315-43112e2bfd88?w=400&q=80', desc:'Ayam betutu Bali empuk penuh rempah, diungkep lama',              price:25000, spicy:true,  paket:false },
-  { id:4,  cat:'Makanan Utama', name:'Bebek Goreng Madura',      emoji:'🦆', img:'https://images.unsplash.com/photo-1647102398925-e23f6486ca04?w=400&q=80', desc:'Bebek goreng crispy, diungkep bumbu kuning khas Madura',          price:29000, spicy:false, paket:false },
-  { id:5,  cat:'Makanan Utama', name:'Rendang Daging Minang',    emoji:'🥘', img:'https://images.unsplash.com/photo-1620700668269-d3ad2a88f27e?w=400&q=80', desc:'Daging sapi empuk dengan bumbu rempah Minang yang kaya',          price:27000, spicy:true,  paket:false },
-  { id:6,  cat:'Makanan Utama', name:'Sate Ayam Madura 5 Tusuk',emoji:'🍢', img:'https://images.unsplash.com/photo-1645696301019-35adcc18fc21?w=400&q=80', desc:'Sate ayam berbumbu kacang manis dan kecap',                       price:18000, spicy:false, paket:false },
-  { id:7,  cat:'Makanan Utama', name:'Tongseng Kambing Solo',    emoji:'🍲', img:'https://images.unsplash.com/photo-1688084546323-fcd3f9d8389b?w=400&q=80', desc:'Tongseng kambing berkuah manis pedas, daging empuk',              price:28000, spicy:true,  paket:false },
-  { id:8,  cat:'Makanan Utama', name:'Ikan Nila Bakar Jimbaran', emoji:'🐟', img:'https://images.unsplash.com/photo-1603088549155-6ae9395b928f?w=400&q=80', desc:'Ikan nila segar dibakar dengan bumbu Jimbaran Bali',              price:26000, spicy:true,  paket:false },
-  { id:9,  cat:'Makanan Utama', name:'Soto Ayam Lamongan',       emoji:'🍜', img:'https://images.unsplash.com/photo-1661830974665-7da532cfaba2?w=400&q=80', desc:'Soto bening dengan ayam suwir, taoge, dan perkedel',              price:16000, spicy:false, paket:false },
-  { id:10, cat:'Makanan Utama', name:'Coto Makassar',            emoji:'🥣', img:'https://images.unsplash.com/photo-1606143704849-eb181ba1543a?w=400&q=80', desc:'Sup jeroan sapi khas Makassar, bumbu kacang yang kental',         price:24000, spicy:false, paket:false },
-  { id:11, cat:'Makanan Utama', name:'Rawon Daging Surabaya',    emoji:'🍛', img:'https://images.unsplash.com/photo-1688084442478-3b499d17126f?w=400&q=80', desc:'Rawon hitam berkuah kluwek khas Surabaya, segar dan gurih',       price:26000, spicy:false, paket:false },
-  { id:12, cat:'Makanan Utama', name:'Sop Iga Garang Asem',      emoji:'🦴', img:'https://images.unsplash.com/photo-1688084465062-8813e3eebc7d?w=400&q=80', desc:'Iga sapi empuk dalam kuah asam segar khas Jawa Tengah',           price:32000, spicy:false, paket:false },
-  // Sayur & Sampingan
-  { id:13, cat:'Sayur & Sampingan', name:'Cah Kangkung Terasi',     emoji:'🥬', img:'https://images.unsplash.com/photo-1628586334715-df49a9a25b81?w=400&q=80', desc:'Kangkung tumis dengan bumbu terasi harum',                        price:12000, spicy:true,  paket:false },
-  { id:14, cat:'Sayur & Sampingan', name:'Gado-Gado Betawi',         emoji:'🥗', img:'https://images.unsplash.com/photo-1645066803665-d16a79a21566?w=400&q=80', desc:'Sayuran rebus, tahu, tempe, dengan saus kacang kental',           price:15000, spicy:false, paket:false },
-  { id:15, cat:'Sayur & Sampingan', name:'Sayur Asem Jakarta',       emoji:'🫕', img:'https://images.unsplash.com/photo-1698309377471-54a87740d979?w=400&q=80', desc:'Sayur asem segar dengan kacang, jagung, melinjo, labu',           price:10000, spicy:false, paket:false },
-  { id:16, cat:'Sayur & Sampingan', name:'Plecing Kangkung',         emoji:'🌶️', img:'https://images.unsplash.com/photo-1766567461692-32c352d198d4?w=400&q=80', desc:'Kangkung rebus dengan sambal tomat pedas khas Lombok',            price:12000, spicy:true,  paket:false },
-  { id:17, cat:'Sayur & Sampingan', name:'Tahu/Tempe Goreng Isi 3',  emoji:'🫘', img:'https://images.unsplash.com/photo-1613360734521-adef8a377347?w=400&q=80', desc:'Tahu atau tempe goreng crispy, cocok sebagai lauk tambahan',      price:6000,  spicy:false, paket:false },
-  // Paket Hemat
-  { id:18, cat:'Paket Hemat', name:'Paket Ayam Kremes',      emoji:'🍱', img:'https://images.unsplash.com/photo-1727404296878-b1c54135cf25?w=400&q=80', desc:'Ayam kremes + Nasi putih + Es Teh Manis',              price:27000, spicy:false, paket:true },
-  { id:19, cat:'Paket Hemat', name:'Paket Rendang Pemuda',   emoji:'🍱', img:'https://images.unsplash.com/photo-1677921755291-c39158477b8e?w=400&q=80', desc:'Rendang daging + Nasi putih + Es Teh Manis',           price:32000, spicy:true,  paket:true },
-  { id:20, cat:'Paket Hemat', name:'Paket Soto Lamongan',    emoji:'🍱', img:'https://images.unsplash.com/photo-1712565043059-cd19ff8394cb?w=400&q=80', desc:'Soto ayam Lamongan + Nasi + Es Teh Manis',             price:22000, spicy:false, paket:true },
-  { id:21, cat:'Paket Hemat', name:'Paket Vegetarian',       emoji:'🍱', img:'https://images.unsplash.com/photo-1727404583890-0eaef7d5b800?w=400&q=80', desc:'Gado-gado + Tempe goreng + Nasi + Es Teh Manis',      price:20000, spicy:false, paket:true },
-  // Camilan & Jajanan
-  { id:22, cat:'Camilan & Jajanan', name:'Bakwan Jagung Manis Isi 3',    emoji:'🌽', img:'https://images.unsplash.com/photo-1628430044262-fb84cffbb744?w=400&q=80', desc:'Bakwan jagung manis renyah, cocok untuk camilan',           price:10000, spicy:false, paket:false },
-  { id:23, cat:'Camilan & Jajanan', name:'Cireng Bumbu Rujak Isi 5',     emoji:'🍘', img:'https://images.unsplash.com/photo-1636301175138-08aba8191957?w=400&q=80', desc:'Cireng kenyal dengan cocolan bumbu rujak pedas manis',      price:12000, spicy:true,  paket:false },
-  { id:24, cat:'Camilan & Jajanan', name:'Pisang Goreng Pasir Keju',     emoji:'🍌', img:'https://images.unsplash.com/photo-1666239308347-4292ea2ff777?w=400&q=80', desc:'Pisang goreng crispy dibalur keju dan cokelat mesra',       price:14000, spicy:false, paket:false },
-  { id:25, cat:'Camilan & Jajanan', name:'Pempek Kapal Selam Mini',      emoji:'🐠', img:'https://images.unsplash.com/photo-1703946908870-200ef3067952?w=400&q=80', desc:'Pempek ikan dengan telur di dalam, cuko asam manis pedas',  price:15000, spicy:true,  paket:false },
-  // Minuman
-  { id:26, cat:'Minuman', name:'Es Cendol Nangka',   emoji:'🍵', img:'https://images.unsplash.com/photo-1622198678447-47d574f474e6?w=400&q=80', desc:'Cendol hijau dengan santan, gula merah, dan nangka segar',  price:12000, spicy:false, paket:false },
-  { id:27, cat:'Minuman', name:'Es Kuwut Bali',       emoji:'🥥', img:'https://images.unsplash.com/photo-1696385793103-71f51f6fd3b7?w=400&q=80', desc:'Kelapa muda dengan jeruk nipis, mint, dan selasih segar',   price:11000, spicy:false, paket:false },
-  { id:28, cat:'Minuman', name:'Es Teler Nusantara',  emoji:'🍧', img:'https://images.unsplash.com/photo-1644288232801-2b40ff99d54f?w=400&q=80', desc:'Kolang-kaling, alpukat, kelapa, santan, dan sirup merah',   price:15000, spicy:false, paket:false },
-  { id:29, cat:'Minuman', name:'Es Teh Manis',        emoji:'🧋', img:'https://images.unsplash.com/photo-1696385793104-745d4dd65c5a?w=400&q=80', desc:'Teh manis dingin segar, pilihan favorit semua orang',       price:5000,  spicy:false, paket:false },
-  { id:30, cat:'Minuman', name:'Es Jeruk',            emoji:'🍊', img:'https://images.unsplash.com/photo-1529563021893-cc83c992d75d?w=400&q=80', desc:'Jeruk segar diperas langsung, tanpa pengawet',              price:8000,  spicy:false, paket:false },
-  { id:31, cat:'Minuman', name:'Wedang Ronde',        emoji:'☕', img:'https://images.unsplash.com/photo-1689997122000-c94449288dd1?w=400&q=80', desc:'Bola ketan isi kacang dalam kuah jahe hangat manis',       price:12000, spicy:false, paket:false },
-  { id:32, cat:'Minuman', name:'Wedang Jahe Susu',    emoji:'🫖', img:'https://images.unsplash.com/photo-1636301175218-6994458a4b0a?w=400&q=80', desc:'Jahe segar dengan susu hangat, menghangatkan badan',        price:10000, spicy:false, paket:false },
-  { id:33, cat:'Minuman', name:'Teh Tarik Hangat',    emoji:'🍵', img:'https://images.unsplash.com/photo-1693626302063-083faef3af5d?w=400&q=80', desc:'Teh susu khas Malaysia yang diseduh dengan cara unik',      price:10000, spicy:false, paket:false },
-];
-
-const CATEGORIES = ['Semua', 'Makanan Utama', 'Sayur & Sampingan', 'Paket Hemat', 'Camilan & Jajanan', 'Minuman'];
-
-const PAY_METHODS = [
-  { id:'qris',     icon:'📱', name:'QRIS',              desc:'GoPay, OVO, Dana, ShopeePay' },
-  { id:'card',     icon:'💳', name:'Kartu Debit/Kredit', desc:'Visa, Mastercard, JCB' },
-  { id:'cash',     icon:'💵', name:'Tunai',             desc:'Bayar langsung ke kasir' },
-  { id:'transfer', icon:'🏦', name:'Transfer Bank',     desc:'BCA, Mandiri, BRI, BNI' },
-];
-
-// =============================================
-// STATE
-// =============================================
+// --- APP DATA STATES ---
 let cart = {};
 let selectedTable = null;
 let guestName = '';
 let selectedPayMethod = 'qris';
-let currentPage = 'home';
 let currentOrderNo = '';
+let qrisTimerInterval = null;
+
+// --- INITIALIZE DUMMY STATIONS FOR FLOOR PLAN ---
+const tableDatabase = [
+  { id: 'T01', name: 'Meja 01', cap: 2, zone: 'indoor', type: 'free' },
+  { id: 'T02', name: 'Meja 02', cap: 2, zone: 'indoor', type: 'free' },
+  { id: 'T03', name: 'Meja 03', cap: 4, zone: 'indoor', type: 'busy' },
+  { id: 'T04', name: 'Meja 04', cap: 4, zone: 'indoor', type: 'free' },
+  { id: 'T05', name: 'Meja 05', cap: 6, zone: 'indoor', type: 'free' },
+  { id: 'T06', name: 'Meja 06', cap: 6, zone: 'indoor', type: 'busy' },
+  { id: 'T07', name: 'Meja 07', cap: 2, zone: 'outdoor', type: 'free' },
+  { id: 'T08', name: 'Meja 08', cap: 2, zone: 'outdoor', type: 'free' },
+  { id: 'T09', name: 'Meja 09', cap: 4, zone: 'outdoor', type: 'busy' },
+  { id: 'T10', name: 'Meja 10', cap: 4, zone: 'outdoor', type: 'free' },
+  { id: 'T11', name: 'Meja 11', cap: 4, zone: 'outdoor', type: 'free' },
+  { id: 'T12', name: 'Meja 12', cap: 8, zone: 'outdoor', type: 'free' },
+  { id: 'VIP1', name: 'VIP Room A', cap: 10, zone: 'vip', type: 'vip' },
+  { id: 'VIP2', name: 'VIP Room B', cap: 12, zone: 'vip', type: 'vip' },
+  { id: 'VIP3', name: 'VIP Room C', cap: 15, zone: 'vip', type: 'busy' },
+];
+
+const categories = [
+  { id: 'all', name: '🍱 Semua Menu' },
+  { id: 'makanan', name: '🍛 Makanan Utama' },
+  { id: 'minuman', name: '🍹 Minuman Segar' },
+  { id: 'paket', name: '🔥 Paket Hemat' }
+];
+
+// --- DATE RESTRICTIONS FOR INPUT ---
+const today = new Date().toISOString().split('T')[0];
+document.getElementById('res-date').value = today;
+document.getElementById('res-date').min = today;
 
 // =============================================
-// NAVIGATION
+// CORE ROUTING MECHANISM
 // =============================================
-const PAGE_ORDER = ['home','reservation','menu','order','payment','thankyou'];
-
-function goToPage(name) {
-  if (name === 'order' && !Object.keys(cart).length) {
-    showNotif('Tambahkan menu terlebih dahulu!');
-    return;
-  }
+function goToPage(pageId) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.getElementById('page-' + name).classList.add('active');
-  currentPage = name;
-  window.scrollTo(0, 0);
-  updateNav();
-  if (name === 'menu')    { renderMenu(); updateMenuBtn(); }
-  if (name === 'order')   { renderOrderPage(); }
-  if (name === 'payment') { renderPaymentPage(); }
+  const targetPage = document.getElementById('page-' + pageId);
+  if(targetPage) {
+    targetPage.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Update dynamic visibility components
+  if(pageId === 'home' || pageId === 'thankyou') {
+    document.getElementById('cart-btn').style.display = 'none';
+  } else {
+    document.getElementById('cart-btn').style.display = 'flex';
+  }
+
+  renderNavDots(pageId);
+
+  // Context triggers on entering specific pages
+  if(pageId === 'menu') {
+    renderMenuGrid('all');
+    renderCategoryTabs();
+    updateMenuSummaryChip();
+  }
+  if(pageId === 'order') {
+    renderReviewPage();
+  }
+  if(pageId === 'payment') {
+    initiatePaymentPage();
+  }
 }
 
-function updateNav() {
-  const pages = ['reservation','menu','order','payment'];
-  const idx = PAGE_ORDER.indexOf(currentPage);
-  document.getElementById('nav-dots').innerHTML = pages.map(p => {
-    const pi = PAGE_ORDER.indexOf(p);
-    let cls = '';
-    if (pi < idx) cls = 'done';
-    else if (p === currentPage) cls = 'active';
-    return `<div class="step-dot ${cls}"></div>`;
-  }).join('');
+function renderNavDots(currentPage) {
+  const container = document.getElementById('nav-dots');
+  container.innerHTML = '';
+  
+  const stepMapping = ['reservation', 'menu', 'order', 'payment'];
+  const currentIndex = stepMapping.indexOf(currentPage);
+  
+  if (currentIndex === -1) return; // Home atau Thank you tidak pakai dots
 
-  const cartBtn = document.getElementById('cart-btn');
-  cartBtn.style.display = ['menu','order'].includes(currentPage) ? 'flex' : 'none';
+  stepMapping.forEach((step, idx) => {
+    const dot = document.createElement('div');
+    dot.className = 'step-dot';
+    if(idx === currentIndex) dot.classList.add('active');
+    else if(idx < currentIndex) dot.classList.add('done');
+    container.appendChild(dot);
+  });
 }
 
 // =============================================
-// FLOOR PLAN
+// STAGE 1: RESERVATION & TABLES
 // =============================================
 function renderFloorPlan() {
-  const fp = document.getElementById('floorplan');
-  fp.innerHTML = `
-    <div class="fp-zone-label" style="grid-area:zone-label-in">— Indoor AC —</div>
-    <div style="grid-area:zone-label-out" class="fp-zone-label">— Outdoor —</div>
-    ${TABLES.filter(t => t.area !== 'vip').map(t => `
-      <div class="fp-table ${t.status} ${selectedTable?.id === t.id ? 'selected' : ''}"
-           style="grid-area:${t.gridArea}"
-           onclick="${t.status === 'busy' ? '' : `selectTable('${t.id}')`}">
-        <div class="fp-table-icon">${t.icon}</div>
-        <div class="fp-table-name">${t.name}</div>
-        <div class="fp-table-cap">${t.cap}</div>
-      </div>
-    `).join('')}
-    <div class="fp-path">Lorong</div>
-    <div class="fp-vip-label">👑 Area VIP</div>
-    ${TABLES.filter(t => t.area === 'vip').map(t => `
-      <div class="fp-table vip ${t.status} ${selectedTable?.id === t.id ? 'selected' : ''}"
-           style="grid-area:${t.gridArea}"
-           onclick="${t.status === 'busy' ? '' : `selectTable('${t.id}')`}">
-        <div class="fp-table-icon">${t.icon}</div>
-        <div class="fp-table-name">${t.name}</div>
-        <div class="fp-table-cap">${t.cap}</div>
-      </div>
-    `).join('')}
-  `;
+  const container = document.getElementById('floorplan');
+  container.innerHTML = '';
+
+  // Add structural labels to grid items dynamically
+  const inLabel = document.createElement('div');
+  inLabel.className = 'fp-zone-label';
+  inLabel.style.gridArea = 'zone-label-in';
+  inLabel.innerText = 'Area Indoor';
+  container.appendChild(inLabel);
+
+  const outLabel = document.createElement('div');
+  outLabel.className = 'fp-zone-label';
+  outLabel.style.gridArea = 'zone-label-out';
+  outLabel.innerText = 'Area Outdoor';
+  container.appendChild(outLabel);
+
+  const path = document.createElement('div');
+  path.className = 'fp-path';
+  path.innerText = 'KORIDOR UTAMA';
+  container.appendChild(path);
+
+  const vipLabel = document.createElement('div');
+  vipLabel.className = 'fp-vip-label';
+  vipLabel.innerText = 'RUANG VIP EKSKLUSIF (Minimal order berlaku)';
+  container.appendChild(vipLabel);
+
+  tableDatabase.forEach(tbl => {
+    const el = document.createElement('div');
+    let dynamicClass = tbl.type;
+    if(selectedTable && selectedTable.id === tbl.id) {
+      dynamicClass = 'selected';
+    }
+
+    el.className = `fp-table ${dynamicClass}`;
+    el.style.gridArea = tbl.id;
+
+    let icon = '🪑';
+    if(tbl.zone === 'vip') icon = '👑';
+    if(tbl.zone === 'outdoor') icon = '🌿';
+
+    el.innerHTML = `
+      <span class="fp-table-icon">${icon}</span>
+      <span class="fp-table-name">${tbl.name}</span>
+      <span class="fp-table-cap">Kapasitas: ${tbl.cap}</span>
+    `;
+
+    if(tbl.type !== 'busy') {
+      el.onclick = () => selectFloorTable(tbl);
+    }
+    container.appendChild(el);
+  });
 }
 
-function selectTable(id) {
-  const t = TABLES.find(t => t.id === id);
-  if (!t || t.status === 'busy') return;
-  selectedTable = t;
+function selectFloorTable(tbl) {
+  selectedTable = tbl;
   renderFloorPlan();
+  
   const info = document.getElementById('selected-table-info');
   info.style.display = 'block';
-  info.innerHTML = `✅ ${t.name} dipilih &mdash; ${t.cap} &mdash; Area ${t.area === 'vip' ? 'VIP' : t.area === 'indoor' ? 'Indoor AC' : 'Outdoor Taman'}`;
-  showNotif(`${t.icon} ${t.name} dipilih!`);
+  let deskripsiTambahan = tbl.zone === 'vip' ? ' (Terkena biaya tambahan reservasi Rp 50.000)' : ' (Tanpa biaya sewa sekat meja)';
+  info.innerText = `Meja Terpilih: ${tbl.name} [Maksimal ${tbl.cap} Tamu] — Zona ${tbl.zone.toUpperCase()} ${deskripsiTambahan}`;
 }
 
-// =============================================
-// RESERVATION
-// =============================================
 function confirmReservation() {
-  const name  = document.getElementById('res-name').value.trim();
+  guestName = document.getElementById('res-name').value.trim();
   const phone = document.getElementById('res-phone').value.trim();
-  const date  = document.getElementById('res-date').value;
-  const time  = document.getElementById('res-time').value;
-  if (!name)          { showNotif('Masukkan nama Anda'); return; }
-  if (!phone)         { showNotif('Masukkan nomor HP'); return; }
-  if (!date)          { showNotif('Pilih tanggal'); return; }
-  if (!time)          { showNotif('Pilih jam kedatangan'); return; }
-  if (!selectedTable) { showNotif('Pilih meja pada denah terlebih dahulu'); return; }
-  guestName = name;
-  const guests = document.getElementById('res-guests').value;
-  document.getElementById('res-chip-text').textContent =
-    `${selectedTable.name} · ${guests} · ${time}`;
-  showNotif(`✓ Reservasi ${selectedTable.name} berhasil!`);
-  setTimeout(() => goToPage('menu'), 400);
-}
+  const time = document.getElementById('res-time').value;
 
-// =============================================
-// MENU
-// =============================================
-function renderMenu() {
-  const tabs = document.getElementById('category-tabs');
-  tabs.innerHTML = CATEGORIES.map((c, i) =>
-    `<button class="cat-tab ${i === 0 ? 'active' : ''}" onclick="filterMenu(this,'${c}')">${c}</button>`
-  ).join('');
-  renderMenuItems('Semua');
-}
-
-function filterMenu(btn, cat) {
-  document.querySelectorAll('.cat-tab').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  renderMenuItems(cat);
-}
-
-function renderMenuItems(cat) {
-  const items = cat === 'Semua' ? MENU : MENU.filter(m => m.cat === cat);
-  document.getElementById('menu-grid').innerHTML = items.map(m => {
-    const badges = `
-      ${m.spicy ? '<span class="spicy">🌶 Pedas</span>' : ''}
-      ${m.paket ? '<span class="badge-paket">✦ PAKET</span>' : ''}
-    `;
-    return `
-    <div class="menu-card">
-      <div class="menu-img">
-        <img src="${m.img}"
-             alt="${m.name}"
-             loading="lazy"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="menu-img-fallback" style="display:none">${m.emoji}</div>
-        <div class="menu-img-badge">${badges}</div>
-      </div>
-      <div class="menu-body">
-        <div class="menu-name">${m.name}</div>
-        <div class="menu-desc">${m.desc}</div>
-        <div class="menu-footer">
-          <div class="menu-price">Rp ${m.price.toLocaleString('id-ID')}</div>
-          <button class="add-btn" onclick="addToCart(${m.id})" title="Tambah ke keranjang">+</button>
-        </div>
-      </div>
-    </div>`;
-  }).join('');
-}
-
-function updateMenuBtn() {
-  const total = Object.values(cart).reduce((a,b)=>a+b,0);
-  const btn = document.getElementById('menu-order-btn');
-  if (btn) btn.textContent = total > 0
-    ? `Lihat Pesanan (${total} item) →`
-    : 'Lihat Pesanan →';
-}
-
-// =============================================
-// CART
-// =============================================
-function addToCart(id) {
-  cart[id] = (cart[id] || 0) + 1;
-  updateCartBadge();
-  renderDrawer();
-  updateMenuBtn();
-  const item = MENU.find(m => m.id === id);
-  showNotif(`${item.emoji} ${item.name} ditambahkan`);
-}
-
-function changeQty(id, delta) {
-  const numId = parseInt(id);
-  cart[numId] = (cart[numId] || 0) + delta;
-  if (cart[numId] <= 0) delete cart[numId];
-  updateCartBadge();
-  renderDrawer();
-  updateMenuBtn();
-  if (currentPage === 'order') renderOrderPage();
-}
-
-function updateCartBadge() {
-  const total = Object.values(cart).reduce((a,b)=>a+b,0);
-  document.getElementById('cart-count').textContent = total;
-}
-
-function cartSubtotal() {
-  return Object.entries(cart).reduce((sum, [id, qty]) => {
-    const item = MENU.find(m => m.id === parseInt(id));
-    return sum + (item ? item.price * qty : 0);
-  }, 0);
-}
-
-function cartGrandTotal() {
-  const sub     = cartSubtotal();
-  const ppn     = Math.round(sub * 0.11);
-  const service = Math.round(sub * 0.05);
-  return { sub, ppn, service, grand: sub + ppn + service };
-}
-
-function renderDrawer() {
-  const body    = document.getElementById('drawer-body');
-  const entries = Object.entries(cart);
-  if (!entries.length) {
-    body.innerHTML = `<div class="empty-cart"><div class="empty-cart-icon">🍽️</div>Belum ada pesanan.<br>Tambahkan menu favorit Anda!</div>`;
-    document.getElementById('drawer-total-amt').textContent = 'Rp 0';
+  if(!guestName || !phone || !time) {
+    showNotif('⚠️ Silakan lengkapi nama, nomor handphone, dan jam kedatangan Anda!');
     return;
   }
-  body.innerHTML = entries.map(([id, qty]) => {
-    const m = MENU.find(m => m.id === parseInt(id));
-    if (!m) return '';
-    return `<div class="cart-item">
-      <img class="cart-thumb" src="${m.img}" alt="${m.name}"
-           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="cart-thumb-fallback" style="display:none">${m.emoji}</div>
-      <div class="cart-item-info">
-        <div class="cart-item-name">${m.name}</div>
-        <div class="cart-item-price">Rp ${m.price.toLocaleString('id-ID')}</div>
-      </div>
-      <div class="qty-control">
-        <button class="qty-btn" onclick="changeQty(${id},-1)">−</button>
-        <span class="qty-num">${qty}</span>
-        <button class="qty-btn" onclick="changeQty(${id},1)">+</button>
-      </div>
-    </div>`;
-  }).join('');
-  document.getElementById('drawer-total-amt').textContent =
-    'Rp ' + cartSubtotal().toLocaleString('id-ID');
+  if(!selectedTable) {
+    showNotif('📌 Silakan klik salah satu meja yang berwarna hijau pada denah lantai!');
+    return;
+  }
+
+  showNotif('✨ Data reservasi berhasil diverifikasi! Silakan pilih menu hidangan.');
+  goToPage('menu');
 }
 
+// =============================================
+// STAGE 2: CATEGORIES & DYNAMIC MENU
+// =============================================
+function renderCategoryTabs() {
+  const container = document.getElementById('category-tabs');
+  container.innerHTML = '';
+  categories.forEach((cat, idx) => {
+    const btn = document.createElement('div');
+    btn.className = 'cat-tab' + (idx === 0 ? ' active' : '');
+    btn.innerText = cat.name;
+    btn.onclick = (e) => {
+      document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+      renderMenuGrid(cat.id);
+    };
+    container.appendChild(btn);
+  });
+}
+
+function updateMenuSummaryChip() {
+  if(selectedTable) {
+    document.getElementById('menu-res-summary').innerText = `👤 Tamu: ${guestName} | Meja: ${selectedTable.name} (${selectedTable.zone.toUpperCase()})`;
+  }
+}
+
+function renderMenuGrid(catId) {
+  const container = document.getElementById('menu-grid');
+  container.innerHTML = '';
+
+  const filtered = catId === 'all' ? menuDatabase : menuDatabase.filter(m => m.category === catId);
+
+  filtered.forEach(item => {
+    const card = document.createElement('div');
+    card.className = 'menu-card';
+
+    let badges = '';
+    item.tags.forEach(t => {
+      if(t === 'spicy') badges += `<span class="spicy">🌶️ Pedas</span>`;
+      else if(t === 'badge-paket') badges += `<span class="badge-paket">📦 Hemat</span>`;
+      else badges += `<span class="spicy" style="background:var(--gold-dark)">★ ${t}</span>`;
+    });
+
+    card.innerHTML = `
+      <div class="menu-img">
+        <div class="menu-img-badge">${badges}</div>
+        <img src="${item.img}" alt="${item.name}" loading="lazy" onerror="this.style.display='none'">
+      </div>
+      <div class="menu-body">
+        <p class="menu-name">${item.name}</p>
+        <p class="menu-desc">${item.desc}</p>
+        <div class="menu-footer">
+          <span class="menu-price">Rp ${item.price.toLocaleString('id-ID')}</span>
+          <button class="add-btn" onclick="addToCart('${item.id}')">+</button>
+        </div>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+}
+
+// =============================================
+// CART DRAWER MECHANICS
+// =============================================
 function openCart() {
-  renderDrawer();
   document.getElementById('cart-drawer').classList.add('open');
   document.getElementById('drawer-overlay').classList.add('open');
+  renderCartDrawer();
 }
 
 function closeCart() {
@@ -892,152 +909,199 @@ function closeCart() {
   document.getElementById('drawer-overlay').classList.remove('open');
 }
 
-// =============================================
-// ORDER PAGE
-// =============================================
-function renderOrderPage() {
-  const entries   = Object.entries(cart);
-  const container = document.getElementById('order-items');
-  if (!entries.length) {
-    container.innerHTML = `<div style="text-align:center;padding:2rem;color:var(--brown-light)">Keranjang masih kosong. <a href="#" onclick="goToPage('menu');return false" style="color:var(--gold-dark)">Tambah menu</a></div>`;
-  } else {
-    container.innerHTML = entries.map(([id, qty]) => {
-      const m = MENU.find(m => m.id === parseInt(id));
-      if (!m) return '';
-      return `<div class="cart-item">
-        <img class="cart-thumb" src="${m.img}" alt="${m.name}"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="cart-thumb-fallback" style="display:none">${m.emoji}</div>
-        <div class="cart-item-info">
-          <div class="cart-item-name">${m.name}</div>
-          <div class="cart-item-price">Rp ${m.price.toLocaleString('id-ID')} / porsi</div>
-        </div>
-        <div class="qty-control">
-          <button class="qty-btn" onclick="changeQty(${id},-1)">−</button>
-          <span class="qty-num">${qty}</span>
-          <button class="qty-btn" onclick="changeQty(${id},1)">+</button>
-        </div>
-        <div class="cart-item-total">Rp ${(m.price * qty).toLocaleString('id-ID')}</div>
-      </div>`;
-    }).join('');
+function addToCart(itemId) {
+  cart[itemId] = (cart[itemId] || 0) + 1;
+  updateCartBadge();
+  showNotif('📥 Berhasil dimasukkan ke daftar pesanan!');
+  if(document.getElementById('cart-drawer').classList.contains('open')) {
+    renderCartDrawer();
+  }
+}
+
+function modifyQty(itemId, val) {
+  if(!cart[itemId]) return;
+  cart[itemId] += val;
+  if(cart[itemId] <= 0) {
+    delete cart[itemId];
+  }
+  updateCartBadge();
+  renderCartDrawer();
+  if(document.getElementById('page-order').classList.contains('active')) {
+    renderReviewPage();
+  }
+}
+
+function updateCartBadge() {
+  const totalItems = Object.values(cart).reduce((a, b) => a + b, 0);
+  document.getElementById('cart-count').innerText = totalItems;
+}
+
+function renderCartDrawer() {
+  const body = document.getElementById('drawer-body');
+  body.innerHTML = '';
+
+  const keys = Object.keys(cart);
+  if(keys.length === 0) {
+    body.innerHTML = `
+      <div class="empty-cart">
+        <div class="empty-cart-icon">🛒</div>
+        <p>Keranjang pesanan kosong.</p>
+        <p style="font-size:0.75rem;margin-top:4px">Klik tanda (+) pada menu makanan untuk menambahkan masakan.</p>
+      </div>
+    `;
+    document.getElementById('drawer-total-amt').innerText = 'Rp 0';
+    return;
   }
 
-  const { sub, ppn, service, grand } = cartGrandTotal();
-  document.getElementById('order-summary-box').innerHTML = `
-    <div class="summary-row"><span>Subtotal (${Object.values(cart).reduce((a,b)=>a+b,0)} item)</span><span>Rp ${sub.toLocaleString('id-ID')}</span></div>
-    <div class="summary-row"><span>PPN 11%</span><span>Rp ${ppn.toLocaleString('id-ID')}</span></div>
-    <div class="summary-row"><span>Biaya Layanan 5%</span><span>Rp ${service.toLocaleString('id-ID')}</span></div>
-    <div class="summary-row total"><span>Total Pembayaran</span><span>Rp ${grand.toLocaleString('id-ID')}</span></div>
-  `;
-}
+  let grandTotal = 0;
+  keys.forEach(id => {
+    const menu = menuDatabase.find(m => m.id === id);
+    if(!menu) return;
+    const sub = menu.price * cart[id];
+    grandTotal += sub;
 
-// =============================================
-// PAYMENT PAGE
-// =============================================
-function renderPaymentPage() {
-  const { sub, ppn, service, grand } = cartGrandTotal();
-  if (!currentOrderNo) currentOrderNo = '#' + Math.floor(10000 + Math.random() * 90000);
-
-  document.getElementById('bill-table-info').textContent =
-    (selectedTable ? selectedTable.name : 'Walk-in') + ' · ' + (guestName || 'Tamu');
-  document.getElementById('order-no').textContent = currentOrderNo;
-
-  const entries   = Object.entries(cart);
-  const billRows  = entries.map(([id, qty]) => {
-    const m = MENU.find(m => m.id === parseInt(id));
-    if (!m) return '';
-    return `<div class="bill-row" style="align-items:center;gap:8px;display:flex;justify-content:space-between">
-      <span style="display:flex;align-items:center;gap:8px">
-        <img src="${m.img}" alt="${m.name}" style="width:32px;height:32px;border-radius:4px;object-fit:cover;flex-shrink:0"
-             onerror="this.style.display='none'">
-        ${m.name} \u00d7${qty}
-      </span>
-      <span style="flex-shrink:0">Rp ${(m.price*qty).toLocaleString('id-ID')}</span>
-    </div>`;
-  }).join('');
-
-  document.getElementById('bill-body').innerHTML = `
-    ${billRows}
-    <hr class="bill-divider">
-    <div class="bill-row"><span>Subtotal</span><span>Rp ${sub.toLocaleString('id-ID')}</span></div>
-    <div class="bill-row"><span>PPN 11%</span><span>Rp ${ppn.toLocaleString('id-ID')}</span></div>
-    <div class="bill-row"><span>Biaya Layanan 5%</span><span>Rp ${service.toLocaleString('id-ID')}</span></div>
-    <div class="bill-total-row"><span>TOTAL</span><span>Rp ${grand.toLocaleString('id-ID')}</span></div>
-  `;
-
-  document.getElementById('payment-methods').innerHTML = PAY_METHODS.map(p => `
-    <div class="pay-method ${selectedPayMethod === p.id ? 'selected' : ''}" onclick="selectPay('${p.id}')">
-      <div class="pay-icon">${p.icon}</div>
-      <div>
-        <div class="pay-name">${p.name}</div>
-        <div class="pay-desc">${p.desc}</div>
+    const row = document.createElement('div');
+    row.className = 'cart-item';
+    row.style.padding = '0.5rem';
+    row.innerHTML = `
+      <div class="cart-item-info">
+        <p class="cart-item-name" style="font-size:0.8rem;">${menu.name}</p>
+        <p class="cart-item-price">Rp ${menu.price.toLocaleString('id-ID')} x ${cart[id]}</p>
       </div>
-    </div>
-  `).join('');
+      <div class="qty-control">
+        <button class="qty-btn" onclick="modifyQty('${id}', -1)">-</button>
+        <span class="qty-num">${cart[id]}</span>
+        <button class="qty-btn" onclick="modifyQty('${id}', 1)">+</button>
+      </div>
+    `;
+    body.appendChild(row);
+  });
 
-  document.getElementById('qris-total').textContent = 'Rp ' + grand.toLocaleString('id-ID');
-  document.getElementById('qris-box').style.display = selectedPayMethod === 'qris' ? 'block' : 'none';
+  document.getElementById('drawer-total-amt').innerText = `Rp ${grandTotal.toLocaleString('id-ID')}`;
 }
 
-function selectPay(id) {
-  selectedPayMethod = id;
-  renderPaymentPage();
+// =============================================
+// STAGE 3: TINJAU PESANAN
+// =============================================
+function renderReviewPage() {
+  if(!currentOrderNo) {
+    currentOrderNo = 'WN-' + Math.floor(100000 + Math.random() * 900000);
+  }
+  
+  document.getElementById('bill-order-id').innerText = 'ID: ' + currentOrderNo;
+  document.getElementById('bill-table-badge').innerText = selectedTable ? selectedTable.name : '—';
+  document.getElementById('bill-name').innerText = guestName;
+  document.getElementById('bill-phone').innerText = document.getElementById('res-phone').value;
+  document.getElementById('bill-time-area').innerText = `${document.getElementById('res-time').value} | Area ${selectedTable ? selectedTable.zone.toUpperCase() : '—'}`;
+  document.getElementById('bill-guests').innerText = document.getElementById('res-guests').value;
+
+  const container = document.getElementById('order-page-items');
+  container.innerHTML = '';
+
+  const keys = Object.keys(cart);
+  let subtotal = 0;
+
+  if(keys.length === 0) {
+    container.innerHTML = `<p style="padding:1.5rem;text-align:center;background:#fff;border:1px solid var(--border);border-radius:6px;font-size:0.85rem;color:var(--brown-light)">Belum ada makanan/minuman yang Anda pilih. Anda dapat melanjutkan tanpa memesan menu makanan makanan awal.</p>`;
+  } else {
+    keys.forEach(id => {
+      const menu = menuDatabase.find(m => m.id === id);
+      if(!menu) return;
+      const totalItemCost = menu.price * cart[id];
+      subtotal += totalItemCost;
+
+      const itemRow = document.createElement('div');
+      itemRow.className = 'cart-item';
+      itemRow.innerHTML = `
+        <img class="cart-thumb" src="${menu.img}" alt="${menu.name}">
+        <div class="cart-item-info">
+          <p class="cart-item-name">${menu.name}</p>
+          <p class="cart-item-price">Rp ${menu.price.toLocaleString('id-ID')} x ${cart[id]}</p>
+        </div>
+        <div class="qty-control">
+          <button class="qty-btn" onclick="modifyQty('${id}', -1)">-</button>
+          <span class="qty-num">${cart[id]}</span>
+          <button class="qty-btn" onclick="modifyQty('${id}', 1)">+</button>
+        </div>
+        <div class="cart-item-total">Rp ${totalItemCost.toLocaleString('id-ID')}</div>
+      `;
+      container.appendChild(itemRow);
+    });
+  }
+
+  // Perhitungan financial invoice
+  let tableFee = (selectedTable && selectedTable.zone === 'vip') ? 50000 : 0;
+  let tax = Math.round((subtotal + tableFee) * 0.10);
+  let finalTotal = subtotal + tableFee + tax;
+
+  document.getElementById('sum-subtotal').innerText = `Rp ${subtotal.toLocaleString('id-ID')}`;
+  document.getElementById('sum-table-fee').innerText = `Rp ${tableFee.toLocaleString('id-ID')}`;
+  document.getElementById('sum-tax').innerText = `Rp ${tax.toLocaleString('id-ID')}`;
+  document.getElementById('sum-total').innerText = `Rp ${finalTotal.toLocaleString('id-ID')}`;
+}
+
+// =============================================
+// STAGE 4: SYSTEM PAYMENTS
+// =============================================
+function selectPayment(method) {
+  selectedPayMethod = method;
+  document.querySelectorAll('.pay-method').forEach(m => m.classList.remove('selected'));
+  document.getElementById('pay-' + method).classList.add('selected');
+
+  const qBox = document.getElementById('qris-box');
+  if(method === 'qris') {
+    qBox.style.display = 'block';
+    startQrisTimer();
+  } else {
+    qBox.style.display = 'none';
+    clearInterval(qrisTimerInterval);
+  }
+}
+
+function startQrisTimer() {
+  clearInterval(qrisTimerInterval);
+  let timeLeft = 300; // 5 menit
+  const timerDisplay = document.getElementById('qris-timer');
+  
+  qrisTimerInterval = setInterval(() => {
+    let m = Math.floor(timeLeft / 60);
+    let s = timeLeft % 60;
+    timerDisplay.innerText = `Sisa waktu bayar: ${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+    timeLeft--;
+    if(timeLeft < 0) {
+      clearInterval(qrisTimerInterval);
+      timerDisplay.innerText = '⚠️ Sesi QRIS kedaluwarsa! Silakan segarkan halaman.';
+    }
+  }, 1000);
+}
+
+function initiatePaymentPage() {
+  clearInterval(qrisTimerInterval);
+  
+  // Ambil total tagihan dari halaman tinjau
+  const totalStr = document.getElementById('sum-total').innerText;
+  document.getElementById('pay-total-amt').innerText = totalStr;
+
+  if(selectedPayMethod === 'qris') {
+    document.getElementById('qris-box').style.display = 'block';
+    startQrisTimer();
+  } else {
+    document.getElementById('qris-box').style.display = 'none';
+  }
 }
 
 function processPayment() {
-  if (!Object.keys(cart).length) { showNotif('Tidak ada pesanan!'); return; }
-  renderThankYou();
+  clearInterval(qrisTimerInterval);
+
+  // Lempar data ke halaman sukses akhir
+  document.getElementById('ty-code').innerText = currentOrderNo;
+  document.getElementById('ty-name').innerText = guestName;
+  document.getElementById('ty-table').innerText = `${selectedTable.name} (${selectedTable.zone.toUpperCase()})`;
+  document.getElementById('ty-time').innerText = `${document.getElementById('res-date').value} @ ${document.getElementById('res-time').value}`;
+  document.getElementById('ty-status').innerText = selectedPayMethod === 'qris' ? 'LUNAS (E-Payment Terverifikasi)' : 'BELUM DIBAYAR (Bayar di Tempat)';
+  document.getElementById('ty-total').innerText = document.getElementById('sum-total').innerText;
+
   goToPage('thankyou');
-}
-
-// =============================================
-// THANK YOU
-// =============================================
-function renderThankYou() {
-  const { sub, ppn, service, grand } = cartGrandTotal();
-  const payLabel  = PAY_METHODS.find(p => p.id === selectedPayMethod)?.name || '';
-  const entries   = Object.entries(cart);
-  const shown     = entries.slice(0, 4);
-  const more      = entries.length - shown.length;
-
-  const itemsHtml = shown.map(([id, qty]) => {
-    const m = MENU.find(m => m.id === parseInt(id));
-    return `<div class="ty-receipt-row">
-      <span class="label">${m.emoji} ${m.name}</span>
-      <span class="value">×${qty} &nbsp; Rp ${(m.price*qty).toLocaleString('id-ID')}</span>
-    </div>`;
-  }).join('') + (more > 0
-    ? `<div class="ty-receipt-row"><span class="label" style="font-style:italic;opacity:0.6">+${more} item lainnya</span><span></span></div>`
-    : '');
-
-  const now    = new Date();
-  const waktu  = now.toLocaleString('id-ID', { hour:'2-digit', minute:'2-digit', day:'2-digit', month:'short', year:'numeric' });
-
-  document.getElementById('ty-receipt').innerHTML = `
-    <div style="font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(250,246,239,0.4);margin-bottom:0.85rem">Struk Digital</div>
-    <div class="ty-receipt-row"><span class="label">No. Order</span><span class="value">${currentOrderNo}</span></div>
-    <div class="ty-receipt-row"><span class="label">Meja</span><span class="value">${selectedTable?.name || 'Walk-in'}</span></div>
-    <div class="ty-receipt-row"><span class="label">Nama</span><span class="value">${guestName || 'Tamu'}</span></div>
-    <div class="ty-receipt-row"><span class="label">Waktu</span><span class="value">${waktu}</span></div>
-    <div class="ty-receipt-row"><span class="label">Metode Bayar</span><span class="value">${payLabel}</span></div>
-    <hr style="border:none;border-top:1px solid rgba(250,246,239,0.12);margin:0.85rem 0">
-    ${itemsHtml}
-    <hr style="border:none;border-top:1px solid rgba(250,246,239,0.12);margin:0.85rem 0">
-    <div class="ty-receipt-row"><span class="label">Subtotal</span><span class="value">Rp ${sub.toLocaleString('id-ID')}</span></div>
-    <div class="ty-receipt-row"><span class="label">Pajak & Layanan</span><span class="value">Rp ${(ppn+service).toLocaleString('id-ID')}</span></div>
-    <div class="ty-receipt-row" style="margin-top:4px">
-      <span class="label ty-receipt-total">Total Dibayar</span>
-      <span class="value ty-receipt-total">Rp ${grand.toLocaleString('id-ID')}</span>
-    </div>
-  `;
-}
-
-function rateStar(n) {
-  document.querySelectorAll('.star-btn').forEach((s, i) => s.classList.toggle('lit', i < n));
-  const msg = n === 5 ? '⭐ Terima kasih atas rating bintang 5!'
-    : n >= 4 ? '😊 Terima kasih atas penilaian Anda!'
-    : '📝 Terima kasih, kami akan terus berkembang!';
-  showNotif(msg);
 }
 
 // =============================================
@@ -1061,6 +1125,15 @@ function exitRestaurant() {
   showNotif('👋 Sampai jumpa! Terima kasih sudah mengunjungi Warung Nusantara.');
 }
 
+function rateApp(stars) {
+  const btns = document.querySelectorAll('.star-btn');
+  btns.forEach((b, i) => {
+    if(i < stars) b.classList.add('lit');
+    else b.classList.remove('lit');
+  });
+  showNotif('❤️ Terima kasih atas penilaian bintang Anda!');
+}
+
 // =============================================
 // NOTIFICATION
 // =============================================
@@ -1073,11 +1146,10 @@ function showNotif(msg) {
 }
 
 // =============================================
-// INIT
+// INIT RUN
 // =============================================
 renderFloorPlan();
-updateNav();
-document.getElementById('res-date').value = new Date().toISOString().split('T')[0];
 </script>
+
 </body>
 </html>
